@@ -377,12 +377,12 @@ static void draw_screen()
         if (idx >= num_lines) break;
         // highlight current line with underline
         if (idx == cur_y) {
-            attron(A_UNDERLINE);
+            attron(A_BOLD);
         }
         // only draw up to screen width
         mvaddnstr(i, 0, lines[idx], cols);
         if (idx == cur_y) {
-            attroff(A_UNDERLINE);
+            attroff(A_BOLD);
         }
     }
     // status (truncate if necessary)
